@@ -6,7 +6,8 @@ const addSubject = (req, res) => {
     subject
         .save()
         .then((data) => {
-            res.status(200).json(data);
+            res.status(200).json({ message: "Asignatura añadida con exito" });
+            console.log(data);
         })
         .catch((err) => {
             res.status(500).json({ message: "Error al crear la asignatura" });
